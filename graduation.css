@@ -1,0 +1,297 @@
+/* Question5d: Visibility Styling - Making sections visually distinct */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(rgba(0, 40, 85, 0.9), rgba(0, 40, 85, 0.95)), 
+                url('assets/banner.jpg') center/cover;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Question 5a: Navigation Styling */
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Question5d: Section Styling - Each section visually distinct */
+.content-section {
+    background: white;
+    margin: 40px 0;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    border-left: 8px solid;
+    transition: transform 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+}
+
+/* Different border colors for each section */
+#welcome { border-left-color: #3498db; }
+#speeches { border-left-color: #2ecc71; }
+#honors { border-left-color: #e74c3c; }
+#gallery { border-left-color: #9b59b6; }
+#acknowledgments { border-left-color: #f39c12; }
+
+/* Different background gradients for visual distinction */
+#welcome .section-content { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
+#speeches .section-content { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
+#honors .section-content { background: linear-gradient(135deg, #ffebee, #ffcdd2); }
+#gallery .section-content { background: linear-gradient(135deg, #f3e5f5, #e1bee7); }
+#acknowledgments .section-content { background: linear-gradient(135deg, #fff3e0, #ffecb3); }
+
+.section-content {
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+    border-bottom: 3px solid;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+#welcome h2 { border-color: #3498db; }
+#speeches h2 { border-color: #2ecc71; }
+#honors h2 { border-color: #e74c3c; }
+#gallery h2 { border-color: #9b59b6; }
+#acknowledgments h2 { border-color: #f39c12; }
+
+/* Section Images */
+.section-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Speech Cards */
+.speech-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.speaker {
+    color: #7f8c8d;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+/* Honors Table */
+.honors-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.honors-table th, .honors-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.honors-table th {
+    background: #2c3e50;
+    color: white;
+}
+
+.honors-table tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.honors-table tr:hover {
+    background: #e3f2fd;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Acknowledgments */
+.acknowledgments-list {
+    list-style-position: inside;
+    margin: 20px 0;
+}
+
+.acknowledgments-list li {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+blockquote {
+    border-left: 4px solid #f39c12;
+    padding-left: 20px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Question 5c: Back to Top Links */
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.back-to-top:hover {
+    background: #34495e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 50px;
+}
+
+.footer-link {
+    color: #3498db;
+    text-decoration: none;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .main-nav a {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .content-section {
+        padding: 25px;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
